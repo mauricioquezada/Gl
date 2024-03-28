@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLADYS BAR-GL CLUB</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            margin: 10px;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GLADYS BAR-GL CLUB</h1>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Galería</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <section id="formulario">
+        <h2>Contacto</h2>
+        <form action="procesar_formulario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="foto1.jpg" alt="Foto 1">
+            </div>
+            <div class="gallery-item">
+                <img src="foto2.jpg" alt="Foto 2">
+            </div>
+            <!-- Agregar más elementos de la galería -->
+        </div>
+    </section>
+</body>
+</html>
