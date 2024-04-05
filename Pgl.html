@@ -34,7 +34,7 @@
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" required></textarea>                                                                         <!-- Área de texto para ingresar el mensaje -->
 
-            <input type="submit" value="Enviar">                      <!-- Botón de envío -->
+            <input type="submit" value="Enviar">                                                              <!-- Botón de envío -->
         </form>
     </section>
 
@@ -57,10 +57,15 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="..." class="d-block w-100" alt="...">
+            <video  controls>
+            <source src="video1.mp4" type="video/mp4">                                                                       <!-- video1 video  controls -->
+          </video>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="..." class="d-block w-100" alt="...">
+          <div class="carousel-item active" data-bs-interval="20000">
+            <video  controls>
+            <source src="video2.mp4" type="video/mp4">
+            <code>video</code>.
+                </video>
           </div>
           <div class="carousel-item">
             <img src="..." class="d-block w-100" alt="...">
@@ -91,13 +96,12 @@
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <a class="navbar-brand"  href="formulario.html">Contactarse con nosotros</a>
           </div>
       </div>
   </div>
 </div>
-
-<!-- Botón para abrir el modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+<button type="button" class="btn btn-primary" onclick="window.location.href='formulario.html'" data-toggle="modal" data-target="#contactModal">                                                <!-- Botón para abrir el modal -->                                                                                                                             
   Contactarse con nosotros
 </button>
 <script src="scripts.js"></script>
