@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>GLADYS BAR-GL CLUB</title>
-
-</head>
+    <title>GLADYS BAR-GL CLUB</title>                                                                                                          <!--  título de la página -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="scripts.js">
+  </head>
 <body>
     <header>
-        <h1>GLADYS BAR-GL CLUB</h1>
+        <h1>GLADYS BAR-GL CLUB</h1>                                                                                                            <!-- Título principal de la página -->
     </header>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Galería</a>
-        <a href="#">Contacto</a>
+    <nav>      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+        <a  class="navbar-brand" href="Pgl.html">Inicio</a>
+        <a  class="navbar-brand" href="pagina1.html">Galería</a>                                                                                <!-- enlaces hacia otras paginas -->
+        <a  class="navbar-brand" href="pagina2.html">Contacto</a>
     </nav>
 
-    <section id="formulario">
-        <h2>Contacto</h2>
+    <section id="formulario">                                                                                                                   <!-- Sección del  formulario de contacto -->
+        <h2>DEJE SU MENSAJE</h2>
         <form action="procesar_formulario.php" method="post">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required>                                                                              <!-- Input para ingresar el nombre -->
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required>                                                                               <!-- Input para ingresar  el email -->
 
             <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
+            <textarea id="mensaje" name="mensaje" required></textarea>                                                                         <!-- Área de texto para ingresar el mensaje -->
 
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar">                      <!-- Botón de envío -->
         </form>
     </section>
 
-    <section id="galeria">
+    <section id="galeria">                                                                                                                      <!-- Sección de galería de imágenes -->    
         <h2>Galería</h2>
         <div class="gallery">
             <div class="gallery-item">
@@ -43,10 +47,13 @@
             <div class="gallery-item">
                 <img src="foto2.jpg" alt="Foto 2">
             </div>
-            <!-- Agregar más elementos de la galería -->
+            <div class="gallery-item ">
+              <iframe src="https://www.instagram.com/reel/C5RpCAFrpRJ/?igsh=eTJqMzMzYjc0eWYy" width="800" height="600" frameborder="0"></iframe> 
+            </div>                                                                                                                             <!-- Agregar más elementos de la galería -->
         </div>
+        
     </section>
-<section>
+<section>                                                                                                                                      <!-- Sección de carrusel de imágenes -->
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
@@ -60,7 +67,7 @@
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>         <!-- Botón de control del carrusel (anterior) -->
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
@@ -69,6 +76,30 @@
         </button>
       </div>
 </section>
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contáctese con nosotros</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <img src="ruta_a_tu_imagen.jpg" alt="Imagen de contacto" class="img-fluid">
+              <p>Por favor, contáctese con nosotros para obtener más información.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+  </div>
+</div>
 
+<!-- Botón para abrir el modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+  Contactarse con nosotros
+</button>
+<script src="scripts.js"></script>
 </body>
 </html>
