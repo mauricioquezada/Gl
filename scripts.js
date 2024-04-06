@@ -19,4 +19,3 @@ alert('lo que pasa en gladys se queda en gladys');
         function irAlInicio() {
             window.location.href = "Pgl.html"; // Redirigir al inicio desde la pagina 2
         }
-        });       
